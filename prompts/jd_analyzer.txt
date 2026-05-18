@@ -1,0 +1,27 @@
+You are a job description analyzer. Extract structured information from the job description below.
+
+Return ONLY valid JSON matching the exact schema. No markdown. No explanation.
+
+OUTPUT SCHEMA:
+{{
+  "title": "Job title extracted from JD",
+  "role": "The specific role/position (e.g., Backend Developer)",
+  "seniority": "Junior|Mid|Senior (MUST be one of these exact strings. Default to 'Mid')",
+  "key_skills": ["skill1", "skill2"]
+}}
+
+EXAMPLE:
+JD: "Looking for a React Frontend Dev. 1 year experience."
+OUTPUT:
+{{
+  "title": "React Frontend Dev",
+  "role": "Frontend Developer",
+  "seniority": "Junior",
+  "key_skills": ["React"]
+}}
+
+JOB DESCRIPTION:
+{job_description}
+
+JSON only:
+

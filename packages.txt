@@ -1,0 +1,5 @@
+# System-level packages required for pocketsphinx (voice feature).
+# This file is used by Streamlit Community Cloud.
+# If pocketsphinx fails to install, the voice feature will be disabled gracefully.
+swig
+libpulse-dev
